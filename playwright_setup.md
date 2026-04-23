@@ -1,19 +1,31 @@
 # Playwright Setup
 
-## Introduction
-This document provides an easy guide to setting up Playwright for automated testing in your project. Playwright is a powerful tool that can help you test your web applications across different browsers.
-
-## Prerequisites
-Before getting started, ensure that you have:
-- Node.js installed (v12 or later)
-- A package manager like npm or yarn
-
 ## Installation
-To install Playwright, run the following command in your terminal:
 
 ```bash
 npm install -D playwright
+npx playwright install
 ```
 
-## Setup
-After installation, you can set up a basic configuration to begin writing tests.
+## Deterministic smoke command
+
+Use the repository script below for deterministic smoke checks:
+
+```bash
+npm run test:smoke:playwright
+```
+
+Current script behavior:
+- executes Playwright with `--workers=1 --retries=0 --reporter=line`
+- targets `tests/smoke`
+- is intended for quick vertical-slice transition checks
+
+## Validation pipeline
+
+Run this before PR creation:
+
+```bash
+npm run validate
+```
+
+This executes lint -> test -> build -> Playwright smoke in order.

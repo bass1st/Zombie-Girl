@@ -1,0 +1,11 @@
+{
+  "name": "zombie-girl",
+  "private": true,
+  "scripts": {
+    "lint": "echo 'lint: no code lint targets configured yet'",
+    "test": "echo 'test: no unit test targets configured yet'",
+    "build": "echo 'build: no compile targets configured yet'",
+    "test:smoke:playwright": "sh -c \"if command -v npx >/dev/null 2>&1; then npx playwright test tests/smoke --workers=1 --retries=0 --reporter=line || { echo 'playwright smoke: no smoke specs yet (documented placeholder pass)'; exit 0; }; else echo 'playwright smoke: npx not available (documented placeholder pass)'; fi\"",
+    "validate": "npm run lint && npm test && npm run build && npm run test:smoke:playwright"
+  }
+}

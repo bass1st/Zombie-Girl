@@ -1,37 +1,23 @@
-# Playtest Checklist (Browser / Manual)
+# Playtest Checklist (Pass/Fail)
 
-## Build and startup
-- [ ] Game launches to menu without errors.
-- [ ] New game flow enters first playable space correctly.
-- [ ] Input prompts map correctly to current control scheme.
+Use this checklist for milestone smoke playtests and mark each item **PASS** or **FAIL**.
 
-## Exploration readability
-- [ ] Player can identify traversable routes at a glance.
-- [ ] Interactables read clearly vs background art.
-- [ ] Objective text remains short and understandable.
+| Check | Status |
+| --- | --- |
+| load/start screen renders | [ ] PASS / [ ] FAIL |
+| start/new game transitions correctly | [ ] PASS / [ ] FAIL |
+| player movement input works | [ ] PASS / [ ] FAIL |
+| tactical encounter transition triggers | [ ] PASS / [ ] FAIL |
+| AP/turn UI visibility correct | [ ] PASS / [ ] FAIL |
+| objective completion returns to exploration/dialogue | [ ] PASS / [ ] FAIL |
+| no overlap/broken UI at target resolutions | [ ] PASS / [ ] FAIL |
 
-## Core verb validation
-- [ ] Stillness is understandable without external explanation.
-- [ ] Scent interaction has clear cause/effect feedback.
-- [ ] Kindly recoil is predictable and usable for movement.
-- [ ] Nib scout interaction is discoverable and valuable.
-
-## Tactical encounter checks
-- [ ] Transition into tactical mode is obvious.
-- [ ] AP and move phase are clearly communicated.
-- [ ] Cover states (low/full/none) are visually distinct.
-- [ ] Enemy behavior is readable and consistent.
-
-## Puzzle quality checks
-- [ ] At least two core verbs are required by room logic.
-- [ ] Solution is teachable through consequence, not long text.
-- [ ] Reset/retry loop is quick and frustration-limited.
-
-## Stability and UX
-- [ ] No soft-locks in puzzle or encounter rooms.
-- [ ] Checkpoint reload returns player to a sensible state.
-- [ ] Audio/visual cues support (not obscure) tactical clarity.
-
-## Exit criteria
-- [ ] Tester can describe the game identity in one sentence.
-- [ ] Tester can explain at least two core mechanics after one session.
+## Required artifacts per run
+- Screenshot evidence for:
+  - start screen rendered
+  - tactical encounter with AP/turn UI visible
+  - post-objective return state (exploration or dialogue)
+- Log snippet evidence for:
+  - start/new game transition
+  - tactical encounter transition trigger
+  - objective completion transition
